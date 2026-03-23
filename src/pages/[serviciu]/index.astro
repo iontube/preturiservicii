@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import SEOHead from '../../components/SEOHead.astro';
 import { servicii, orase, getPaginiForServiciu, getCategorii } from '../../helpers/data';
 import { buildWebPageSchema, buildBreadcrumbSchema } from '../../helpers/structured-data';
+import pillarContent from '../../data/pillar-content.json';
 
 export function getStaticPaths() {
   return servicii.map(s => ({ params: { serviciu: s.slug }, props: { serviciu: s } }));
@@ -10,6 +11,7 @@ export function getStaticPaths() {
 
 const { serviciu } = Astro.props;
 const serviciiSimilare = servicii.filter(s => s.categorie === serviciu.categorie && s.slug !== serviciu.slug);
+const pillar = pillarContent[serviciu.slug];
 ---
 
 <Layout>
@@ -36,16 +38,18 @@ const serviciiSimilare = servicii.filter(s => s.categorie === serviciu.categorie
     </header>
 
     <!-- Pillar content -->
-    <div class="content mb-10">
-      <h2>Ce influențează prețul</h2>
-      <p>Prețul pentru {serviciu.nume.toLowerCase()} depinde de mai mulți factori: orașul în care te afli (București e cu 30% mai scump decât media), complexitatea lucrării, materialele alese, urgența și sezonul. Vara și primăvara prețurile cresc cu 10-20% din cauza cererii mari.</p>
+    {pillar && (
+      <div class="content mb-10">
+        <h2>Ce influențează prețul la {serviciu.nume.toLowerCase()}</h2>
+        <p>{pillar.ce_influenteaza}</p>
 
-      <h2>Cum compari oferte corect</h2>
-      <p>Cere minim 3 oferte de la profesioniști diferiți. Asigură-te că fiecare ofertă include aceleași lucrări - manopera și materialele trebuie detaliate separat. Prețul cel mai mic nu e neapărat cea mai bună alegere: verifică experiența, garanția oferită și recenziile anterioare.</p>
+        <h2>Ce include prețul la {serviciu.nume.toLowerCase()}</h2>
+        <p>{pillar.ce_include}</p>
 
-      <h2>Ce include și ce nu include prețul</h2>
-      <p>Un preț profesional include de obicei manopera, deplasarea și curățenia de bază. Materialele pot fi incluse sau nu - depinde de ofertă. Atenție la costuri ascunse: demontare/montare mobilier, reparații neprevăzute, transport materiale. Clarifică toate acestea înainte de a semna contractul.</p>
-    </div>
+        <h2>Sfaturi pentru {serviciu.nume.toLowerCase()}</h2>
+        <p>{pillar.sfaturi}</p>
+      </div>
+    )}
 
     <!-- Price table per city -->
     <section class="mb-10">
