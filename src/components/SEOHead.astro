@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  noindex?: boolean;
+  jsonLd?: string[];
+}
+
+const { title, description, canonical, noindex = false, jsonLd = [] } = Astro.props;
+const site = 'https://preturiservicii.ro';
+const url = canonical ? `${site}${canonical}` : `${site}${Astro.url.pathname}`;
+const full = title.length > 50 ? title : `${title} | preturiservicii.ro`;
+---
+
+<title>{full}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={url} />
+{noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="index, follow" />}
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={full} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={url} />
+<meta property="og:site_name" content="preturiservicii.ro" />
+<meta property="og:locale" content="ro_RO" />
+<meta property="og:image" content={`${site}/og-default.png`} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={full} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={`${site}/og-default.png`} />
+
+{jsonLd.map(s => <script type="application/ld+json" set:html={s} />)}

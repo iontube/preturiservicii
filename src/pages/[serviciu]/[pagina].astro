@@ -1,0 +1,178 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEOHead from '../../components/SEOHead.astro';
+import { servicii, orase, getAllPagini, getServiciuBySlug, getOrasBySlug, getPaginiForServiciuOras } from '../../helpers/data';
+import type { Pagina } from '../../helpers/types';
+import { buildWebPageSchema, buildBreadcrumbSchema, buildFAQSchema } from '../../helpers/structured-data';
+
+export function getStaticPaths() {
+  return getAllPagini().map(p => ({
+    params: { serviciu: p.serviciuSlug, pagina: p.slug },
+    props: { pagina: p },
+  }));
+}
+
+const { pagina } = Astro.props as { pagina: Pagina };
+const serviciu = getServiciuBySlug(pagina.serviciuSlug)!;
+const oras = getOrasBySlug(pagina.orasSlug);
+
+const isMainOrasPage = pagina.slug === pagina.orasSlug;
+const faqsInOras = getPaginiForServiciuOras(pagina.serviciuSlug, pagina.orasSlug)
+  .filter(p => p.slug !== pagina.slug && p.slug !== pagina.orasSlug);
+const serviciiSimilare = servicii.filter(s => s.categorie === serviciu.categorie && s.slug !== serviciu.slug).slice(0, 4);
+const alteOrase = orase.filter(o => o.slug !== pagina.orasSlug).slice(0, 6);
+---
+
+<Layout>
+  <SEOHead
+    slot="head"
+    title={pagina.metaTitle}
+    description={pagina.metaDescription}
+    canonical={`/${pagina.serviciuSlug}/${pagina.slug}/`}
+    jsonLd={[
+      buildWebPageSchema(pagina.titlu, pagina.metaDescription, `/${pagina.serviciuSlug}/${pagina.slug}/`),
+      buildBreadcrumbSchema([
+        { label: 'Acasă', href: '/' },
+        { label: serviciu.nume, href: `/${serviciu.slug}/` },
+        ...(oras ? [{ label: oras.nume }] : []),
+      ]),
+      ...(!isMainOrasPage ? [buildFAQSchema([{ question: pagina.titlu, answer: pagina.intro }])] : []),
+    ]}
+  />
+
+  <article class="wrap-sm py-8">
+    <nav class="text-sm text-neutral-400 mb-6">
+      <a href="/" class="hover:text-navy-600 no-underline">Acasă</a> ›
+      <a href={`/${serviciu.slug}/`} class="hover:text-navy-600 no-underline">{serviciu.nume}</a> ›
+      {!isMainOrasPage && oras && (
+        <><a href={`/${serviciu.slug}/${oras.slug}/`} class="hover:text-navy-600 no-underline">{oras.nume}</a> › </>
+      )}
+      <span class="text-neutral-600">{isMainOrasPage ? oras?.nume : pagina.titlu.substring(0, 40)}</span>
+    </nav>
+
+    <header class="mb-8">
+      <div class="flex gap-2 mb-3">
+        <a href={`/${serviciu.slug}/`} class="chip chip-navy no-underline hover:bg-navy-200">{serviciu.nume}</a>
+        {oras && <span class="chip chip-gold">{oras.nume}</span>}
+      </div>
+      <h1 class="text-xl sm:text-2xl font-heading font-bold text-neutral-900 leading-snug mb-4">{pagina.titlu}</h1>
+
+      <!-- Price card -->
+      <div class="price-card">
+        <div class="price-card-header flex items-center justify-between">
+          <span class="text-sm font-medium">Preț estimat în {pagina.orasNume}</span>
+          <span class="text-navy-300 text-xs">{pagina.unitate}</span>
+        </div>
+        <div class="price-card-body flex items-center justify-around text-center py-5">
+          <div>
+            <p class="text-2xl font-bold text-navy-800">{pagina.pretMin}</p>
+            <p class="text-xs text-neutral-400 mt-0.5">minim</p>
+          </div>
+          <div class="w-px h-10 bg-neutral-200"></div>
+          <div>
+            <p class="text-3xl font-bold text-gold-600">{pagina.pretMediu}</p>
+            <p class="text-xs text-neutral-400 mt-0.5">mediu</p>
+          </div>
+          <div class="w-px h-10 bg-neutral-200"></div>
+          <div>
+            <p class="text-2xl font-bold text-navy-800">{pagina.pretMax}</p>
+            <p class="text-xs text-neutral-400 mt-0.5">maxim</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {isMainOrasPage && (
+      <Fragment>
+        <!-- Oraș main page: conținut + FAQ list -->
+        <div class="content mb-8">
+          <p>Prețul pentru {serviciu.nume.toLowerCase()} în {oras?.nume} variază între {pagina.pretMin} și {pagina.pretMax} {pagina.unitate}, cu o medie de {pagina.pretMediu} {pagina.unitate}. Aceste valori sunt orientative și depind de complexitatea lucrării, materialele alese și sezonul în care angajezi.</p>
+          <p>{oras?.nume} se află {oras && oras.coef > 1.1 ? 'peste' : oras && oras.coef < 0.95 ? 'sub' : 'în jurul'} mediei naționale ca nivel de prețuri pentru servicii. Cererea locală, costul vieții și concurența dintre profesioniști influențează direct tarifele.</p>
+        </div>
+
+        {faqsInOras.length > 0 && (
+          <section class="mb-10">
+            <h2 class="text-lg font-heading font-bold text-neutral-900 mb-4">Întrebări despre prețuri</h2>
+            <div class="space-y-2">
+              {faqsInOras.map(p => (
+                <a href={`/${p.serviciuSlug}/${p.slug}/`} class="group flex items-center justify-between border border-neutral-200 rounded-lg px-4 py-3 no-underline hover:border-navy-300 transition-colors">
+                  <span class="text-sm font-medium text-neutral-800 group-hover:text-navy-700">{p.titlu}</span>
+                  <svg class="w-4 h-4 text-neutral-300 group-hover:text-navy-400 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+      </Fragment>
+    )}
+
+    {!isMainOrasPage && (
+      <Fragment>
+        <!-- FAQ detail page -->
+        <div class="content mb-8">
+          <p>{pagina.intro}</p>
+        </div>
+
+        {pagina.sectiuni.map(s => (
+          <section class="mb-8">
+            <h2 class="text-lg font-bold text-neutral-900 mb-3">{s.titlu}</h2>
+            {s.tip === 'lista' ? (
+              <ul class="space-y-2">
+                {s.items.map(item => (
+                  <li class="flex gap-2 text-sm text-neutral-600">
+                    <span class="shrink-0 w-1.5 h-1.5 rounded-full bg-navy-400 mt-2"></span>
+                    <span>{item.titlu ? `${item.titlu}: ` : ''}{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <div class="content">{s.items.map(item => <p>{item.text}</p>)}</div>
+            )}
+          </section>
+        ))}
+
+        <div class="bg-gold-50 border-l-3 border-gold-400 px-5 py-4 rounded-r-lg text-sm mb-10">
+          <p class="text-neutral-700">{pagina.concluzie}</p>
+        </div>
+
+        {faqsInOras.length > 0 && (
+          <section class="mb-10 pt-8 border-t border-neutral-100">
+            <h2 class="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-4">Prețuri {serviciu.nume.toLowerCase()} în {oras?.nume}</h2>
+            <div class="space-y-1.5">
+              {faqsInOras.slice(0, 5).map(p => (
+                <a href={`/${p.serviciuSlug}/${p.slug}/`} class="group flex items-center justify-between py-2 px-3 -mx-3 rounded-lg no-underline hover:bg-neutral-50">
+                  <span class="text-sm text-neutral-600 group-hover:text-navy-600">{p.titlu}</span>
+                  <svg class="w-3.5 h-3.5 text-neutral-300 shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+      </Fragment>
+    )}
+
+    <!-- Cross-silo: prețuri similare în același oraș -->
+    <section class="mb-10 pt-8 border-t border-neutral-100">
+      <h2 class="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-3">Alte prețuri în {oras?.nume}</h2>
+      <div class="flex flex-wrap gap-2">
+        {serviciiSimilare.map(s => (
+          <a href={`/${s.slug}/${pagina.orasSlug}/`} class="chip chip-navy no-underline hover:bg-navy-200">{s.nume}</a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Cross-silo: același serviciu, alte orașe -->
+    <section class="pt-8 border-t border-neutral-100">
+      <h2 class="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-3">Preț {serviciu.nume.toLowerCase()} în alte orașe</h2>
+      <div class="flex flex-wrap gap-2">
+        {alteOrase.map(o => (
+          <a href={`/${serviciu.slug}/${o.slug}/`} class="chip chip-navy no-underline hover:bg-navy-200">{o.nume}</a>
+        ))}
+      </div>
+    </section>
+  </article>
+</Layout>

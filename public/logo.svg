@@ -1,0 +1,9 @@
+<svg viewBox="0 0 650 120" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#1e3a5f"/>
+  </linearGradient></defs>
+  <rect width="100" height="100" rx="22" y="10" fill="url(#bg)"/>
+  <text x="50" y="80" font-family="system-ui" font-size="50" font-weight="800" fill="#fbbf24" text-anchor="middle">₽</text>
+  <text x="120" y="58" font-family="system-ui" font-size="34" font-weight="700" fill="#171717">prețuri<tspan fill="#1e3a5f">servicii</tspan>.ro</text>
+  <text x="120" y="88" font-family="system-ui" font-size="13" fill="#737373">Cât costă serviciile în orașul tău</text>
+</svg>

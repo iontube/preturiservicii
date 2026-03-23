@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEOHead from '../components/SEOHead.astro';
+import { servicii, orase, getAllPagini, getCategorii } from '../helpers/data';
+import { buildWebSiteSchema, buildWebPageSchema } from '../helpers/structured-data';
+const total = getAllPagini().length;
+const cats = getCategorii();
+const topServicii = servicii.slice(0, 8);
+---
+
+<Layout>
+  <SEOHead
+    slot="head"
+    title="preturiservicii.ro - Cât costă serviciile în România"
+    description={`Prețuri orientative pentru ${servicii.length} servicii în ${orase.length} orașe din România. Intervale min-max actualizate.`}
+    canonical="/"
+    jsonLd={[buildWebSiteSchema(), buildWebPageSchema('preturiservicii.ro', 'Prețuri orientative pentru servicii în România', '/')]}
+  />
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-navy-900 to-navy-950 py-20 sm:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 32px 32px;"></div>
+    <div class="wrap relative z-10 text-center">
+      <span class="chip chip-gold mb-5 inline-flex">{total.toLocaleString('ro-RO')} prețuri</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white leading-tight mb-5">
+        Cât costă <span class="text-gold-400">serviciile</span> în orașul tău
+      </h1>
+      <p class="text-navy-300 text-lg max-w-xl mx-auto mb-10">
+        Prețuri orientative pentru {servicii.length} servicii în {orase.length} orașe din România. Cu intervale min-max și factori care influențează costul.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
+        <a href="/zugravit/" class="btn-navy no-underline">Preț zugravit</a>
+        <a href="/instalator/" class="btn-ghost text-white/70 border border-white/15 hover:bg-white/10 no-underline">Preț instalator</a>
+        <a href="/electrician/" class="btn-ghost text-white/70 border border-white/15 hover:bg-white/10 no-underline">Preț electrician</a>
+      </div>
+      <div class="flex items-center justify-center gap-8 pt-8 border-t border-white/10">
+        <div class="text-center">
+          <p class="text-2xl font-bold text-white">{servicii.length}</p>
+          <p class="text-xs text-navy-400">servicii cu prețuri</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-white">{orase.length}</p>
+          <p class="text-xs text-navy-400">orașe acoperite</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl font-bold text-white">{cats.length}</p>
+          <p class="text-xs text-navy-400">categorii</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="wrap py-12">
+    <div class="max-w-3xl">
+      <div class="content">
+        <p>„Cât costă?" e prima întrebare pe care o pui când ai nevoie de un serviciu. Problema e că prețurile variază enorm: între orașe, între sezoane, între profesioniști. Un zugrav în București ia altceva decât unul în Botoșani, iar renovarea unei băi poate costa de la 3.000 la 10.000 lei în funcție de materiale și complexitate.</p>
+        <p>Pe preturiservicii.ro găsești intervale de preț realiste pentru fiecare serviciu, adaptate per oraș prin coeficienți regionali. Nu sunt prețuri exacte - sunt estimări care te ajută să știi dacă o ofertă e rezonabilă sau nu. Cere mereu ofertă în scris de la profesionist înainte de a începe lucrarea.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top servicii cu prețuri -->
+  <section class="bg-white py-12 border-y border-neutral-100">
+    <div class="wrap">
+      <h2 class="text-xl font-heading font-bold text-neutral-900 mb-6">Cele mai căutate prețuri</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {topServicii.map(s => (
+          <a href={`/${s.slug}/`} class="price-card no-underline group hover:shadow-md transition-shadow">
+            <div class="px-4 py-3">
+              <h3 class="font-semibold text-sm text-neutral-800 group-hover:text-navy-700 mb-2">{s.nume}</h3>
+              <div class="flex items-baseline gap-1">
+                <span class="text-lg font-bold text-navy-700">{s.pretMin}-{s.pretMax}</span>
+                <span class="text-xs text-neutral-400">{s.unitate}</span>
+              </div>
+              <p class="text-[11px] text-neutral-400 mt-1">preț mediu național</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorii -->
+  {cats.map(cat => {
+    const catServicii = servicii.filter(s => s.categorie === cat);
+    return (
+      <section id={cat.toLowerCase().replace(/\s+/g, '-')} class="wrap py-10 border-b border-neutral-100">
+        <h2 class="text-lg font-heading font-bold text-neutral-900 mb-5">{cat}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+          {catServicii.map(s => (
+            <a href={`/${s.slug}/`} class="group flex items-center justify-between border border-neutral-200 rounded-lg px-4 py-3 no-underline hover:border-navy-300 transition-colors">
+              <div>
+                <span class="font-medium text-sm text-neutral-800 group-hover:text-navy-700">{s.nume}</span>
+                <span class="block text-xs text-neutral-400 mt-0.5">{s.pretMin}-{s.pretMax} {s.unitate}</span>
+              </div>
+              <svg class="w-4 h-4 text-neutral-300 group-hover:text-navy-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </section>
+    );
+  })}
+
+  <!-- Orașe -->
+  <section class="wrap py-12">
+    <h2 class="text-lg font-heading font-bold text-neutral-900 mb-6">Prețuri pe orașe</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {orase.slice(0, 9).map(o => (
+        <div class="border border-neutral-200 rounded-lg p-4">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-heading font-semibold text-neutral-900 text-sm">{o.nume}</h3>
+            <span class="text-[10px] text-neutral-400">coef. {o.coef}x</span>
+          </div>
+          <div class="space-y-1">
+            {servicii.slice(0, 3).map(s => (
+              <a href={`/${s.slug}/${o.slug}/`} class="flex items-center justify-between text-xs no-underline py-0.5">
+                <span class="text-navy-600 hover:text-navy-800">{s.nume}</span>
+                <span class="text-neutral-400">{Math.round(s.pretMin * o.coef)}-{Math.round(s.pretMax * o.coef)} {s.unitate}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="flex flex-wrap gap-2 mt-6">
+      {orase.slice(9).map(o => (
+        <span class="chip chip-navy">{o.nume}</span>
+      ))}
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="bg-neutral-100 py-10">
+    <div class="wrap text-center">
+      <p class="text-sm text-neutral-500 max-w-xl mx-auto">Prețurile afișate sunt orientative și se bazează pe medii de piață. Pot varia în funcție de complexitatea lucrării, materialele alese, urgența și sezonul. Cere mereu ofertă detaliată în scris.</p>
+    </div>
+  </section>
+</Layout>

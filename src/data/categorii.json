@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "renovari",
+    "nume": "Renovări"
+  },
+  {
+    "slug": "instalatii",
+    "nume": "Instalații"
+  },
+  {
+    "slug": "electricitate",
+    "nume": "Electricitate"
+  },
+  {
+    "slug": "curatenie",
+    "nume": "Curățenie"
+  },
+  {
+    "slug": "transport",
+    "nume": "Transport"
+  },
+  {
+    "slug": "auto",
+    "nume": "Auto"
+  },
+  {
+    "slug": "frumusete",
+    "nume": "Frumusețe"
+  },
+  {
+    "slug": "sanatate",
+    "nume": "Sănătate"
+  },
+  {
+    "slug": "profesionale",
+    "nume": "Profesionale"
+  },
+  {
+    "slug": "evenimente",
+    "nume": "Evenimente"
+  },
+  {
+    "slug": "exterior",
+    "nume": "Exterior"
+  },
+  {
+    "slug": "securitate",
+    "nume": "Securitate"
+  },
+  {
+    "slug": "educatie",
+    "nume": "Educație"
+  }
+]

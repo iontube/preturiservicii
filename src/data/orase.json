@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "bucuresti",
+    "nume": "București",
+    "coef": 1.3
+  },
+  {
+    "slug": "cluj-napoca",
+    "nume": "Cluj-Napoca",
+    "coef": 1.25
+  },
+  {
+    "slug": "timisoara",
+    "nume": "Timișoara",
+    "coef": 1.15
+  },
+  {
+    "slug": "iasi",
+    "nume": "Iași",
+    "coef": 1.05
+  },
+  {
+    "slug": "constanta",
+    "nume": "Constanța",
+    "coef": 1.1
+  },
+  {
+    "slug": "brasov",
+    "nume": "Brașov",
+    "coef": 1.15
+  },
+  {
+    "slug": "craiova",
+    "nume": "Craiova",
+    "coef": 0.95
+  },
+  {
+    "slug": "galati",
+    "nume": "Galați",
+    "coef": 0.9
+  },
+  {
+    "slug": "ploiesti",
+    "nume": "Ploiești",
+    "coef": 1
+  },
+  {
+    "slug": "oradea",
+    "nume": "Oradea",
+    "coef": 1.05
+  },
+  {
+    "slug": "arad",
+    "nume": "Arad",
+    "coef": 1
+  },
+  {
+    "slug": "sibiu",
+    "nume": "Sibiu",
+    "coef": 1.1
+  },
+  {
+    "slug": "pitesti",
+    "nume": "Pitești",
+    "coef": 0.95
+  },
+  {
+    "slug": "bacau",
+    "nume": "Bacău",
+    "coef": 0.9
+  },
+  {
+    "slug": "targu-mures",
+    "nume": "Târgu Mureș",
+    "coef": 1
+  },
+  {
+    "slug": "baia-mare",
+    "nume": "Baia Mare",
+    "coef": 0.9
+  },
+  {
+    "slug": "buzau",
+    "nume": "Buzău",
+    "coef": 0.85
+  },
+  {
+    "slug": "suceava",
+    "nume": "Suceava",
+    "coef": 0.85
+  },
+  {
+    "slug": "botosani",
+    "nume": "Botoșani",
+    "coef": 0.8
+  },
+  {
+    "slug": "satu-mare",
+    "nume": "Satu Mare",
+    "coef": 0.9
+  },
+  {
+    "slug": "alba-iulia",
+    "nume": "Alba Iulia",
+    "coef": 0.95
+  },
+  {
+    "slug": "deva",
+    "nume": "Deva",
+    "coef": 0.9
+  }
+]

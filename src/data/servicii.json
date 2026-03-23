@@ -1,0 +1,642 @@
+[
+  {
+    "slug": "zugravit",
+    "nume": "Zugravit",
+    "unitate": "lei/mp",
+    "pretMin": 12,
+    "pretMax": 35,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "zugravit-apartament-2-camere",
+    "nume": "Zugravit apartament 2 camere",
+    "unitate": "lei total",
+    "pretMin": 1500,
+    "pretMax": 3500,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "zugravit-apartament-3-camere",
+    "nume": "Zugravit apartament 3 camere",
+    "unitate": "lei total",
+    "pretMin": 2000,
+    "pretMax": 5000,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "zugravit-casa",
+    "nume": "Zugravit casă",
+    "unitate": "lei total",
+    "pretMin": 3000,
+    "pretMax": 8000,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "montaj-gresie",
+    "nume": "Montaj gresie",
+    "unitate": "lei/mp",
+    "pretMin": 30,
+    "pretMax": 70,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "montaj-faianta",
+    "nume": "Montaj faianță",
+    "unitate": "lei/mp",
+    "pretMin": 35,
+    "pretMax": 80,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "montaj-parchet-laminat",
+    "nume": "Montaj parchet laminat",
+    "unitate": "lei/mp",
+    "pretMin": 15,
+    "pretMax": 35,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "montaj-parchet-masiv",
+    "nume": "Montaj parchet masiv",
+    "unitate": "lei/mp",
+    "pretMin": 40,
+    "pretMax": 90,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "tencuiala-interior",
+    "nume": "Tencuială interior",
+    "unitate": "lei/mp",
+    "pretMin": 20,
+    "pretMax": 50,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "tencuiala-exterior",
+    "nume": "Tencuială exterior",
+    "unitate": "lei/mp",
+    "pretMin": 30,
+    "pretMax": 70,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "glet-interior",
+    "nume": "Glet interior",
+    "unitate": "lei/mp",
+    "pretMin": 10,
+    "pretMax": 25,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "montaj-rigips",
+    "nume": "Montaj rigips",
+    "unitate": "lei/mp",
+    "pretMin": 25,
+    "pretMax": 60,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "renovare-apartament",
+    "nume": "Renovare completă apartament",
+    "unitate": "lei/mp",
+    "pretMin": 200,
+    "pretMax": 500,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "renovare-baie",
+    "nume": "Renovare baie",
+    "unitate": "lei total",
+    "pretMin": 3000,
+    "pretMax": 10000,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "renovare-bucatarie",
+    "nume": "Renovare bucătărie",
+    "unitate": "lei total",
+    "pretMin": 4000,
+    "pretMax": 15000,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "instalator",
+    "nume": "Instalator (manoperă)",
+    "unitate": "lei/oră",
+    "pretMin": 80,
+    "pretMax": 200,
+    "categorie": "Instalații"
+  },
+  {
+    "slug": "instalatie-sanitara",
+    "nume": "Instalație sanitară completă",
+    "unitate": "lei/punct",
+    "pretMin": 150,
+    "pretMax": 400,
+    "categorie": "Instalații"
+  },
+  {
+    "slug": "montaj-centrala-termica",
+    "nume": "Montaj centrală termică",
+    "unitate": "lei total",
+    "pretMin": 800,
+    "pretMax": 2500,
+    "categorie": "Instalații"
+  },
+  {
+    "slug": "montaj-aer-conditionat",
+    "nume": "Montaj aer condiționat",
+    "unitate": "lei total",
+    "pretMin": 300,
+    "pretMax": 800,
+    "categorie": "Instalații"
+  },
+  {
+    "slug": "instalatie-incalzire-pardoseala",
+    "nume": "Încălzire în pardoseală",
+    "unitate": "lei/mp",
+    "pretMin": 30,
+    "pretMax": 80,
+    "categorie": "Instalații"
+  },
+  {
+    "slug": "desfundat-canalizare",
+    "nume": "Desfundat canalizare",
+    "unitate": "lei/intervenție",
+    "pretMin": 100,
+    "pretMax": 400,
+    "categorie": "Instalații"
+  },
+  {
+    "slug": "electrician",
+    "nume": "Electrician (manoperă)",
+    "unitate": "lei/oră",
+    "pretMin": 80,
+    "pretMax": 200,
+    "categorie": "Electricitate"
+  },
+  {
+    "slug": "instalatie-electrica",
+    "nume": "Instalație electrică completă",
+    "unitate": "lei/punct",
+    "pretMin": 80,
+    "pretMax": 200,
+    "categorie": "Electricitate"
+  },
+  {
+    "slug": "tablou-electric",
+    "nume": "Montaj tablou electric",
+    "unitate": "lei total",
+    "pretMin": 300,
+    "pretMax": 1000,
+    "categorie": "Electricitate"
+  },
+  {
+    "slug": "montaj-iluminat",
+    "nume": "Montaj iluminat",
+    "unitate": "lei/punct",
+    "pretMin": 30,
+    "pretMax": 100,
+    "categorie": "Electricitate"
+  },
+  {
+    "slug": "inlocuire-prize",
+    "nume": "Înlocuire prize și întrerupătoare",
+    "unitate": "lei/bucată",
+    "pretMin": 20,
+    "pretMax": 60,
+    "categorie": "Electricitate"
+  },
+  {
+    "slug": "curatenie-generala",
+    "nume": "Curățenie generală",
+    "unitate": "lei/mp",
+    "pretMin": 5,
+    "pretMax": 15,
+    "categorie": "Curățenie"
+  },
+  {
+    "slug": "curatenie-dupa-constructor",
+    "nume": "Curățenie după constructor",
+    "unitate": "lei/mp",
+    "pretMin": 8,
+    "pretMax": 20,
+    "categorie": "Curățenie"
+  },
+  {
+    "slug": "spalat-covoare",
+    "nume": "Spălat covoare",
+    "unitate": "lei/mp",
+    "pretMin": 10,
+    "pretMax": 30,
+    "categorie": "Curățenie"
+  },
+  {
+    "slug": "spalat-canapea",
+    "nume": "Spălat canapea",
+    "unitate": "lei/loc",
+    "pretMin": 50,
+    "pretMax": 150,
+    "categorie": "Curățenie"
+  },
+  {
+    "slug": "dezinsectie",
+    "nume": "Dezinsecție",
+    "unitate": "lei/cameră",
+    "pretMin": 30,
+    "pretMax": 80,
+    "categorie": "Curățenie"
+  },
+  {
+    "slug": "deratizare",
+    "nume": "Deratizare",
+    "unitate": "lei/intervenție",
+    "pretMin": 100,
+    "pretMax": 300,
+    "categorie": "Curățenie"
+  },
+  {
+    "slug": "mutari-locale",
+    "nume": "Mutări locale",
+    "unitate": "lei/cursă",
+    "pretMin": 200,
+    "pretMax": 600,
+    "categorie": "Transport"
+  },
+  {
+    "slug": "mutari-internationale",
+    "nume": "Mutări internaționale",
+    "unitate": "lei/mc",
+    "pretMin": 200,
+    "pretMax": 500,
+    "categorie": "Transport"
+  },
+  {
+    "slug": "transport-mobila",
+    "nume": "Transport mobilă",
+    "unitate": "lei/cursă",
+    "pretMin": 150,
+    "pretMax": 400,
+    "categorie": "Transport"
+  },
+  {
+    "slug": "tractare-auto",
+    "nume": "Tractare auto",
+    "unitate": "lei/km",
+    "pretMin": 3,
+    "pretMax": 8,
+    "categorie": "Transport"
+  },
+  {
+    "slug": "schimb-anvelope",
+    "nume": "Schimb anvelope",
+    "unitate": "lei/set",
+    "pretMin": 40,
+    "pretMax": 120,
+    "categorie": "Auto"
+  },
+  {
+    "slug": "itp-auto",
+    "nume": "ITP auto",
+    "unitate": "lei/inspecție",
+    "pretMin": 100,
+    "pretMax": 200,
+    "categorie": "Auto"
+  },
+  {
+    "slug": "polish-auto",
+    "nume": "Polish auto",
+    "unitate": "lei/auto",
+    "pretMin": 200,
+    "pretMax": 600,
+    "categorie": "Auto"
+  },
+  {
+    "slug": "spalare-auto",
+    "nume": "Spălare auto",
+    "unitate": "lei/auto",
+    "pretMin": 30,
+    "pretMax": 100,
+    "categorie": "Auto"
+  },
+  {
+    "slug": "detailing-auto",
+    "nume": "Detailing auto",
+    "unitate": "lei/auto",
+    "pretMin": 400,
+    "pretMax": 1500,
+    "categorie": "Auto"
+  },
+  {
+    "slug": "tuns-barbati",
+    "nume": "Tuns bărbați",
+    "unitate": "lei/ședință",
+    "pretMin": 25,
+    "pretMax": 80,
+    "categorie": "Frumusețe"
+  },
+  {
+    "slug": "tuns-femei",
+    "nume": "Tuns femei",
+    "unitate": "lei/ședință",
+    "pretMin": 40,
+    "pretMax": 150,
+    "categorie": "Frumusețe"
+  },
+  {
+    "slug": "vopsit-par",
+    "nume": "Vopsit păr",
+    "unitate": "lei/ședință",
+    "pretMin": 100,
+    "pretMax": 400,
+    "categorie": "Frumusețe"
+  },
+  {
+    "slug": "manichiura",
+    "nume": "Manichiură",
+    "unitate": "lei/ședință",
+    "pretMin": 40,
+    "pretMax": 120,
+    "categorie": "Frumusețe"
+  },
+  {
+    "slug": "pedichiura",
+    "nume": "Pedichiură",
+    "unitate": "lei/ședință",
+    "pretMin": 50,
+    "pretMax": 130,
+    "categorie": "Frumusețe"
+  },
+  {
+    "slug": "masaj-relaxare",
+    "nume": "Masaj relaxare",
+    "unitate": "lei/oră",
+    "pretMin": 80,
+    "pretMax": 200,
+    "categorie": "Frumusețe"
+  },
+  {
+    "slug": "extensii-gene",
+    "nume": "Extensii gene",
+    "unitate": "lei/ședință",
+    "pretMin": 100,
+    "pretMax": 300,
+    "categorie": "Frumusețe"
+  },
+  {
+    "slug": "detartraj",
+    "nume": "Detartraj dentar",
+    "unitate": "lei/ședință",
+    "pretMin": 100,
+    "pretMax": 300,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "plomba-dentara",
+    "nume": "Plombă dentară",
+    "unitate": "lei/dinte",
+    "pretMin": 150,
+    "pretMax": 400,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "implant-dentar",
+    "nume": "Implant dentar",
+    "unitate": "lei/implant",
+    "pretMin": 2000,
+    "pretMax": 5000,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "aparat-dentar",
+    "nume": "Aparat dentar",
+    "unitate": "lei total",
+    "pretMin": 2000,
+    "pretMax": 8000,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "albire-dentara",
+    "nume": "Albire dentară",
+    "unitate": "lei/ședință",
+    "pretMin": 500,
+    "pretMax": 1500,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "consultatie-psiholog",
+    "nume": "Consultație psiholog",
+    "unitate": "lei/ședință",
+    "pretMin": 100,
+    "pretMax": 300,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "sedinta-fizioterapie",
+    "nume": "Ședință fizioterapie",
+    "unitate": "lei/ședință",
+    "pretMin": 80,
+    "pretMax": 200,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "consultatie-veterinar",
+    "nume": "Consultație veterinar",
+    "unitate": "lei/consultație",
+    "pretMin": 50,
+    "pretMax": 150,
+    "categorie": "Sănătate"
+  },
+  {
+    "slug": "contabilitate-srl",
+    "nume": "Contabilitate SRL",
+    "unitate": "lei/lună",
+    "pretMin": 300,
+    "pretMax": 1000,
+    "categorie": "Profesionale"
+  },
+  {
+    "slug": "contabilitate-pfa",
+    "nume": "Contabilitate PFA",
+    "unitate": "lei/lună",
+    "pretMin": 150,
+    "pretMax": 500,
+    "categorie": "Profesionale"
+  },
+  {
+    "slug": "consultatie-avocat",
+    "nume": "Consultație avocat",
+    "unitate": "lei/oră",
+    "pretMin": 100,
+    "pretMax": 500,
+    "categorie": "Profesionale"
+  },
+  {
+    "slug": "traducere-autorizata",
+    "nume": "Traducere autorizată",
+    "unitate": "lei/pagină",
+    "pretMin": 30,
+    "pretMax": 80,
+    "categorie": "Profesionale"
+  },
+  {
+    "slug": "evaluare-imobiliara",
+    "nume": "Evaluare imobiliară",
+    "unitate": "lei/raport",
+    "pretMin": 300,
+    "pretMax": 800,
+    "categorie": "Profesionale"
+  },
+  {
+    "slug": "fotograf-nunta",
+    "nume": "Fotograf nuntă",
+    "unitate": "lei/eveniment",
+    "pretMin": 1500,
+    "pretMax": 5000,
+    "categorie": "Evenimente"
+  },
+  {
+    "slug": "videograf-nunta",
+    "nume": "Videograf nuntă",
+    "unitate": "lei/eveniment",
+    "pretMin": 2000,
+    "pretMax": 6000,
+    "categorie": "Evenimente"
+  },
+  {
+    "slug": "dj-nunta",
+    "nume": "DJ nuntă",
+    "unitate": "lei/eveniment",
+    "pretMin": 800,
+    "pretMax": 2500,
+    "categorie": "Evenimente"
+  },
+  {
+    "slug": "catering-nunta",
+    "nume": "Catering nuntă",
+    "unitate": "lei/persoană",
+    "pretMin": 80,
+    "pretMax": 250,
+    "categorie": "Evenimente"
+  },
+  {
+    "slug": "tuns-gazon",
+    "nume": "Tuns gazon",
+    "unitate": "lei/mp",
+    "pretMin": 1,
+    "pretMax": 4,
+    "categorie": "Exterior"
+  },
+  {
+    "slug": "toaletat-copaci",
+    "nume": "Toaletat copaci",
+    "unitate": "lei/copac",
+    "pretMin": 100,
+    "pretMax": 400,
+    "categorie": "Exterior"
+  },
+  {
+    "slug": "montaj-gard",
+    "nume": "Montaj gard",
+    "unitate": "lei/ml",
+    "pretMin": 80,
+    "pretMax": 250,
+    "categorie": "Exterior"
+  },
+  {
+    "slug": "pavaj-exterior",
+    "nume": "Pavaj exterior",
+    "unitate": "lei/mp",
+    "pretMin": 40,
+    "pretMax": 120,
+    "categorie": "Exterior"
+  },
+  {
+    "slug": "constructie-terasa",
+    "nume": "Construcție terasă",
+    "unitate": "lei/mp",
+    "pretMin": 200,
+    "pretMax": 600,
+    "categorie": "Exterior"
+  },
+  {
+    "slug": "inlocuire-acoperis",
+    "nume": "Înlocuire acoperiș",
+    "unitate": "lei/mp",
+    "pretMin": 80,
+    "pretMax": 200,
+    "categorie": "Exterior"
+  },
+  {
+    "slug": "montaj-fereastra-termopan",
+    "nume": "Montaj fereastră termopan",
+    "unitate": "lei/bucată",
+    "pretMin": 100,
+    "pretMax": 300,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "usa-interior",
+    "nume": "Montaj ușă interior",
+    "unitate": "lei/bucată",
+    "pretMin": 100,
+    "pretMax": 300,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "usa-exterior",
+    "nume": "Montaj ușă exterior",
+    "unitate": "lei/bucată",
+    "pretMin": 200,
+    "pretMax": 600,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "izolatie-termica",
+    "nume": "Izolație termică exterioară",
+    "unitate": "lei/mp",
+    "pretMin": 60,
+    "pretMax": 150,
+    "categorie": "Renovări"
+  },
+  {
+    "slug": "sistem-alarma",
+    "nume": "Montaj sistem alarmă",
+    "unitate": "lei total",
+    "pretMin": 500,
+    "pretMax": 2000,
+    "categorie": "Securitate"
+  },
+  {
+    "slug": "camere-supraveghere",
+    "nume": "Montaj camere supraveghere",
+    "unitate": "lei/cameră",
+    "pretMin": 200,
+    "pretMax": 500,
+    "categorie": "Securitate"
+  },
+  {
+    "slug": "permis-auto-b",
+    "nume": "Permis auto cat. B",
+    "unitate": "lei total",
+    "pretMin": 1500,
+    "pretMax": 3000,
+    "categorie": "Educație"
+  },
+  {
+    "slug": "curs-engleza",
+    "nume": "Curs engleză",
+    "unitate": "lei/lună",
+    "pretMin": 150,
+    "pretMax": 500,
+    "categorie": "Educație"
+  },
+  {
+    "slug": "meditatii",
+    "nume": "Meditații",
+    "unitate": "lei/oră",
+    "pretMin": 50,
+    "pretMax": 150,
+    "categorie": "Educație"
+  }
+]

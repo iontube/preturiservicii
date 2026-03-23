@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/inter-latin.woff2') format('woff2');
+}
+
+@theme {
+  --color-navy-50: #eff6ff;
+  --color-navy-100: #dbeafe;
+  --color-navy-200: #bfdbfe;
+  --color-navy-300: #93c5fd;
+  --color-navy-400: #60a5fa;
+  --color-navy-500: #3b82f6;
+  --color-navy-600: #2563eb;
+  --color-navy-700: #1d4ed8;
+  --color-navy-800: #1e3a5f;
+  --color-navy-900: #0f2440;
+  --color-navy-950: #091428;
+
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;
+  --color-gold-700: #b45309;
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { @apply bg-neutral-50 text-neutral-600 font-body leading-relaxed; }
+  h1, h2, h3, h4 { @apply font-heading font-bold text-neutral-900; }
+  a { @apply transition-colors duration-150; }
+  ::selection { @apply bg-navy-100 text-navy-900; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-5xl px-5 lg:px-8; }
+  .wrap-sm { @apply mx-auto w-full max-w-3xl px-5 lg:px-8; }
+
+  .chip { @apply inline-flex items-center px-2.5 py-0.5 text-xs font-semibold rounded-full; }
+  .chip-navy { @apply bg-navy-100 text-navy-700; }
+  .chip-gold { @apply bg-gold-100 text-gold-700; }
+
+  .link { @apply text-navy-600 hover:text-navy-800 underline decoration-navy-200 underline-offset-2; }
+
+  .btn-navy { @apply inline-flex items-center justify-center gap-2 font-semibold bg-navy-800 text-white px-5 py-2.5 rounded-lg hover:bg-navy-900 text-sm transition-colors; }
+  .btn-ghost { @apply inline-flex items-center justify-center gap-2 font-medium text-neutral-600 px-5 py-2.5 rounded-lg hover:bg-neutral-100 text-sm transition-colors; }
+
+  /* Price card */
+  .price-card {
+    @apply bg-white rounded-xl border border-neutral-200 overflow-hidden;
+  }
+  .price-card-header {
+    @apply bg-gradient-to-r from-navy-800 to-navy-900 px-5 py-4 text-white;
+  }
+  .price-card-body {
+    @apply px-5 py-4;
+  }
+
+  /* Price table */
+  .price-table {
+    @apply w-full text-sm;
+  }
+  .price-table th {
+    @apply text-left text-xs text-neutral-400 uppercase tracking-wider font-semibold pb-3 border-b border-neutral-100;
+  }
+  .price-table td {
+    @apply py-3 border-b border-neutral-50;
+  }
+
+  .content { @apply text-neutral-600 leading-[1.75]; }
+  .content p { @apply mb-4; }
+  .content h2 { @apply text-lg font-bold text-neutral-900 mt-8 mb-3; }
+  .content ul { @apply mb-4 space-y-1.5 list-disc pl-5; }
+}
