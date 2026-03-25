@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && node scripts/split-sitemaps.mjs",
+    "build:drip": "astro build && node scripts/split-sitemaps.mjs && node scripts/drip-sitemap-index.mjs",
     "generate": "node scripts/generate-data.mjs",
     "preview": "astro preview"
   },
