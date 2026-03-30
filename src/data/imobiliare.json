@@ -1,0 +1,749 @@
+{
+  "bucuresti": {
+    "nume": "București",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1936,
+        "avg": 2146,
+        "min": 1751,
+        "max": 2290,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1976,
+        "avg": 2373,
+        "min": 1681,
+        "max": 2710,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 299,
+        "avg": 981,
+        "min": 111,
+        "max": 976,
+        "count": 35
+      },
+      "inchiriere-apartament": {
+        "median": 10,
+        "avg": 12,
+        "min": 9,
+        "max": 13,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 11,
+        "avg": 72,
+        "min": 9,
+        "max": 15,
+        "count": 37
+      }
+    }
+  },
+  "cluj-napoca": {
+    "nume": "Cluj-Napoca",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 3183,
+        "avg": 3260,
+        "min": 2704,
+        "max": 3750,
+        "count": 30
+      },
+      "vanzare-casa": {
+        "median": 4325,
+        "avg": 5006,
+        "min": 3333,
+        "max": 5408,
+        "count": 25
+      },
+      "vanzare-teren": {
+        "median": 1150,
+        "avg": 1214,
+        "min": 470,
+        "max": 2000,
+        "count": 23
+      },
+      "inchiriere-casa": {
+        "median": 109,
+        "avg": 112,
+        "min": 100,
+        "max": 127,
+        "count": 3
+      }
+    }
+  },
+  "timisoara": {
+    "nume": "Timișoara",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 2250,
+        "avg": 2472,
+        "min": 1750,
+        "max": 2500,
+        "count": 26
+      },
+      "vanzare-casa": {
+        "median": 1584,
+        "avg": 2209,
+        "min": 1292,
+        "max": 2900,
+        "count": 27
+      },
+      "vanzare-teren": {
+        "median": 719,
+        "avg": 825,
+        "min": 360,
+        "max": 1200,
+        "count": 29
+      }
+    }
+  },
+  "iasi": {
+    "nume": "Iași",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1798,
+        "avg": 1909,
+        "min": 1560,
+        "max": 2101,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1667,
+        "avg": 1663,
+        "min": 1474,
+        "max": 1768,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 49,
+        "avg": 64,
+        "min": 30,
+        "max": 80,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 9,
+        "avg": 9,
+        "min": 8,
+        "max": 10,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 8,
+        "avg": 8,
+        "min": 7,
+        "max": 9,
+        "count": 37
+      }
+    }
+  },
+  "constanta": {
+    "nume": "Constanța",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1933,
+        "avg": 1901,
+        "min": 1488,
+        "max": 2232,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1250,
+        "avg": 1275,
+        "min": 867,
+        "max": 1677,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 35,
+        "avg": 163,
+        "min": 0,
+        "max": 182,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 9,
+        "avg": 9,
+        "min": 8,
+        "max": 11,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 10,
+        "avg": 13,
+        "min": 7,
+        "max": 13,
+        "count": 37
+      }
+    }
+  },
+  "brasov": {
+    "nume": "Brașov",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 2157,
+        "avg": 2251,
+        "min": 1971,
+        "max": 2456,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1550,
+        "avg": 1562,
+        "min": 1167,
+        "max": 2029,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 48,
+        "avg": 59,
+        "min": 33,
+        "max": 58,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 10,
+        "avg": 10,
+        "min": 9,
+        "max": 11,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 8,
+        "avg": 8,
+        "min": 6,
+        "max": 9,
+        "count": 37
+      }
+    }
+  },
+  "craiova": {
+    "nume": "Craiova",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 2333,
+        "avg": 2271,
+        "min": 1550,
+        "max": 2833,
+        "count": 28
+      },
+      "vanzare-casa": {
+        "median": 1999,
+        "avg": 2451,
+        "min": 1325,
+        "max": 3083,
+        "count": 29
+      },
+      "vanzare-teren": {
+        "median": 250,
+        "avg": 471,
+        "min": 156,
+        "max": 690,
+        "count": 25
+      }
+    }
+  },
+  "galati": {
+    "nume": "Galați",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1300,
+        "avg": 1389,
+        "min": 1169,
+        "max": 1576,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 886,
+        "avg": 966,
+        "min": 619,
+        "max": 1214,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 30,
+        "avg": 62,
+        "min": 8,
+        "max": 68,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 9,
+        "avg": 9,
+        "min": 8,
+        "max": 10,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 6,
+        "avg": 7,
+        "min": 5,
+        "max": 9,
+        "count": 11
+      }
+    }
+  },
+  "ploiesti": {
+    "nume": "Ploiești",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1555,
+        "avg": 1685,
+        "min": 1250,
+        "max": 1917,
+        "count": 29
+      },
+      "vanzare-casa": {
+        "median": 1458,
+        "avg": 1927,
+        "min": 1208,
+        "max": 2208,
+        "count": 27
+      },
+      "vanzare-teren": {
+        "median": 500,
+        "avg": 660,
+        "min": 256,
+        "max": 750,
+        "count": 29
+      }
+    }
+  },
+  "oradea": {
+    "nume": "Oradea",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1965,
+        "avg": 2383,
+        "min": 1758,
+        "max": 2325,
+        "count": 30
+      },
+      "vanzare-casa": {
+        "median": 2333,
+        "avg": 2677,
+        "min": 1441,
+        "max": 3500,
+        "count": 28
+      },
+      "vanzare-teren": {
+        "median": 576,
+        "avg": 967,
+        "min": 330,
+        "max": 1395,
+        "count": 23
+      }
+    }
+  },
+  "arad": {
+    "nume": "Arad",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1135,
+        "avg": 1253,
+        "min": 1044,
+        "max": 1454,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1082,
+        "avg": 1042,
+        "min": 564,
+        "max": 1466,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 53,
+        "avg": 73,
+        "min": 15,
+        "max": 79,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 6,
+        "avg": 7,
+        "min": 5,
+        "max": 8,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 5,
+        "avg": 6,
+        "min": 4,
+        "max": 7,
+        "count": 37
+      }
+    }
+  },
+  "sibiu": {
+    "nume": "Sibiu",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1944,
+        "avg": 1973,
+        "min": 1783,
+        "max": 2182,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1742,
+        "avg": 1816,
+        "min": 1591,
+        "max": 2050,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 49,
+        "avg": 57,
+        "min": 35,
+        "max": 85,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 8,
+        "avg": 8,
+        "min": 7,
+        "max": 9,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 6,
+        "avg": 7,
+        "min": 6,
+        "max": 8,
+        "count": 37
+      }
+    }
+  },
+  "pitesti": {
+    "nume": "Pitești",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1458,
+        "avg": 1689,
+        "min": 1183,
+        "max": 1886,
+        "count": 26
+      },
+      "vanzare-casa": {
+        "median": 2529,
+        "avg": 2700,
+        "min": 1333,
+        "max": 3500,
+        "count": 25
+      },
+      "vanzare-teren": {
+        "median": 228,
+        "avg": 354,
+        "min": 150,
+        "max": 440,
+        "count": 28
+      }
+    }
+  },
+  "bacau": {
+    "nume": "Bacău",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1250,
+        "avg": 1293,
+        "min": 1019,
+        "max": 1587,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 938,
+        "avg": 980,
+        "min": 625,
+        "max": 1226,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 41,
+        "avg": 46,
+        "min": 22,
+        "max": 55,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 6,
+        "avg": 7,
+        "min": 6,
+        "max": 8,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 6,
+        "avg": 5,
+        "min": 1,
+        "max": 6,
+        "count": 30
+      }
+    }
+  },
+  "targu-mures": {
+    "nume": "Târgu Mureș",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1873,
+        "avg": 2113,
+        "min": 1533,
+        "max": 2250,
+        "count": 28
+      },
+      "vanzare-casa": {
+        "median": 1917,
+        "avg": 2445,
+        "min": 1458,
+        "max": 3417,
+        "count": 27
+      },
+      "vanzare-teren": {
+        "median": 299,
+        "avg": 611,
+        "min": 170,
+        "max": 929,
+        "count": 29
+      }
+    }
+  },
+  "baia-mare": {
+    "nume": "Baia Mare",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1333,
+        "avg": 1564,
+        "min": 1150,
+        "max": 1667,
+        "count": 28
+      },
+      "vanzare-casa": {
+        "median": 2317,
+        "avg": 2665,
+        "min": 1583,
+        "max": 2958,
+        "count": 26
+      },
+      "vanzare-teren": {
+        "median": 170,
+        "avg": 264,
+        "min": 79,
+        "max": 306,
+        "count": 26
+      }
+    }
+  },
+  "buzau": {
+    "nume": "Buzău",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1337,
+        "avg": 1349,
+        "min": 1119,
+        "max": 1474,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 883,
+        "avg": 932,
+        "min": 463,
+        "max": 1154,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 16,
+        "avg": 27,
+        "min": 7,
+        "max": 40,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 8,
+        "avg": 47,
+        "min": 7,
+        "max": 10,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 8,
+        "avg": 7,
+        "min": 3,
+        "max": 9,
+        "count": 15
+      }
+    }
+  },
+  "suceava": {
+    "nume": "Suceava",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1786,
+        "avg": 1695,
+        "min": 1444,
+        "max": 1908,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1029,
+        "avg": 1180,
+        "min": 750,
+        "max": 1692,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 19,
+        "avg": 35,
+        "min": 10,
+        "max": 50,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 7,
+        "avg": 7,
+        "min": 6,
+        "max": 8,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 6,
+        "avg": 5,
+        "min": 4,
+        "max": 7,
+        "count": 35
+      }
+    }
+  },
+  "botosani": {
+    "nume": "Botoșani",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1296,
+        "avg": 1333,
+        "min": 1150,
+        "max": 1500,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1194,
+        "avg": 1228,
+        "min": 907,
+        "max": 1486,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 23,
+        "avg": 36,
+        "min": 4,
+        "max": 52,
+        "count": 36
+      },
+      "inchiriere-apartament": {
+        "median": 7,
+        "avg": 80,
+        "min": 6,
+        "max": 9,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 5,
+        "avg": 4,
+        "min": 3,
+        "max": 5,
+        "count": 5
+      }
+    }
+  },
+  "satu-mare": {
+    "nume": "Satu Mare",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1216,
+        "avg": 1246,
+        "min": 1088,
+        "max": 1477,
+        "count": 37
+      },
+      "vanzare-casa": {
+        "median": 1180,
+        "avg": 1238,
+        "min": 894,
+        "max": 1470,
+        "count": 37
+      },
+      "vanzare-teren": {
+        "median": 21,
+        "avg": 71,
+        "min": 11,
+        "max": 34,
+        "count": 37
+      },
+      "inchiriere-apartament": {
+        "median": 6,
+        "avg": 6,
+        "min": 5,
+        "max": 7,
+        "count": 37
+      },
+      "inchiriere-casa": {
+        "median": 5,
+        "avg": 5,
+        "min": 4,
+        "max": 6,
+        "count": 15
+      }
+    }
+  },
+  "alba-iulia": {
+    "nume": "Alba Iulia",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1433,
+        "avg": 1456,
+        "min": 1206,
+        "max": 1663,
+        "count": 26
+      },
+      "vanzare-casa": {
+        "median": 2208,
+        "avg": 2545,
+        "min": 1433,
+        "max": 2625,
+        "count": 23
+      },
+      "vanzare-teren": {
+        "median": 147,
+        "avg": 272,
+        "min": 105,
+        "max": 220,
+        "count": 26
+      }
+    }
+  },
+  "deva": {
+    "nume": "Deva",
+    "preturi": {
+      "vanzare-apartament": {
+        "median": 1250,
+        "avg": 1319,
+        "min": 917,
+        "max": 1583,
+        "count": 23
+      },
+      "vanzare-casa": {
+        "median": 2250,
+        "avg": 2295,
+        "min": 1583,
+        "max": 2708,
+        "count": 23
+      },
+      "vanzare-teren": {
+        "median": 200,
+        "avg": 516,
+        "min": 80,
+        "max": 700,
+        "count": 10
+      }
+    }
+  }
+}

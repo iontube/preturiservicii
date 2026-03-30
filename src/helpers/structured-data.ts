@@ -13,6 +13,7 @@ export function buildWebPageSchema(title: string, desc: string, url: string): st
   return JSON.stringify({
     '@context': 'https://schema.org', '@type': 'WebPage',
     name: title, description: desc, url: SITE + url, inLanguage: 'ro',
+    dateModified: new Date().toISOString().split('T')[0],
     isPartOf: { '@type': 'WebSite', name: 'preturiservicii.ro', url: SITE },
   });
 }

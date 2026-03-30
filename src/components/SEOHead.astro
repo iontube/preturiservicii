@@ -11,6 +11,7 @@ const { title, description, canonical, noindex = false, jsonLd = [] } = Astro.pr
 const site = 'https://preturiservicii.ro';
 const url = canonical ? `${site}${canonical}` : `${site}${Astro.url.pathname}`;
 const full = title.length > 50 ? title : `${title} | preturiservicii.ro`;
+const now = new Date().toISOString();
 ---
 
 <title>{full}</title>
@@ -19,6 +20,7 @@ const full = title.length > 50 ? title : `${title} | preturiservicii.ro`;
 {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="index, follow" />}
 
 <meta property="og:type" content="website" />
+<meta property="article:modified_time" content={now} />
 <meta property="og:title" content={full} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={url} />

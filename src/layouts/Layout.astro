@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
-const year = new Date().getFullYear();
+const now = new Date();
+const year = now.getFullYear();
+const updated = now.toLocaleDateString('ro-RO', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 
 <!doctype html>
@@ -32,7 +34,7 @@ const year = new Date().getFullYear();
     <footer class="bg-navy-950 text-navy-400 py-8 mt-16">
       <div class="wrap">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-sm">
-          <p>&copy; {year} preturiservicii.ro · Prețuri orientative.</p>
+          <p>&copy; {year} preturiservicii.ro · Actualizat {updated}</p>
           <nav class="flex gap-4 text-navy-500">
             <a href="/despre/" class="hover:text-navy-300 no-underline">Despre</a>
             <a href="/contact/" class="hover:text-navy-300 no-underline">Contact</a>
